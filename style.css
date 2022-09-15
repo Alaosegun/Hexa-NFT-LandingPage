@@ -163,12 +163,19 @@ nav button{
         background-repeat: no-repeat;
         background-position: right  top;
         background-size: 100%;
+        
+    }
+    main{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
     }
     html{
         overflow-x: hidden;
     }
     nav{
         justify-content: space-between;
+        width: 100%;
     }
     nav ul, nav button{
         display: none;
@@ -227,9 +234,12 @@ nav button{
     .hero2-img{
         position: absolute;
         z-index: -1;
-        right: 10%;
-        bottom: 14rem;
+        right: 9%;
+        top: 27rem;
         width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     .header-text .explore{
         width: 40%;
