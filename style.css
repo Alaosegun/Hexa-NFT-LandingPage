@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: sora;
+    src: url(./Sora/Sora-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: poppins;
+    src: url(./Poppins/Poppins-Light.ttf);
+}
+html{
+    background: linear-gradient(180deg, #FFFEE3 -2.34%, rgba(255, 255, 243, 0.92) 27.89%, #FEFEF4 56.92%, rgba(255, 255, 243, 0.92) 86.54%, rgba(254, 254, 228, 0.92) 113.75%); 
+}
+body{
+   
+    background-image: url(Images/3\ lines\ hexa.png);
+    background-repeat: no-repeat;
+    background-position: right  top;
+    background-size: 55%;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    line-height: 50px;
+    height: 90px; 
+    font-family: poppins;
+   
+}
+nav label{
+    margin-top: 0.8rem;
+}
+nav ul{
+    margin-top: 0.8rem;
+}
+nav ul li{
+    display: inline;
+    margin: 2rem;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 700;
+    line-height: 45px;
+    text-transform: capitalize;
+}
+nav button{
+    width: 180px;
+    height: 55px;
+    color: white;
+    background-color: #171717;
+    border-radius: 8px;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 45px;
+    margin-top: 0.8rem;
+    margin-left: 2rem;
+ 
+}
+.nav-button-section{
+    
+    /* display: flex; */
+}
+.nav-button-section img{
+    width: inherit;
+    height: inherit;
+}
+.header-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+.header-text h1{
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 81px;
+    width: 36.75rem;
+    
+}
+.header-text h1 span{
+    color:  #FF521B;
+}
+.header-img img{
+    width: 30rem;
+}
+.header-container p{
+    width: 558px;
+    height: 84px;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 42px;
+    letter-spacing: -0.01em;
+    color: #000000;
+    margin-top: 1rem;
+}
+.header-container p a{
+    text-decoration: none;
+    color: #FF521B;
+}
+.header-text .explore{
+    width: 30%;
+    height: 60px;
+    background: #171717;
+    border: 2px solid #171717;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4375rem;
+    line-height: 45px;
+    margin-top: 1.2rem;
+}
+.header-text .create{
+    width: 30%;
+    height: 60px;
+    border-radius: 10px;
+    background: transparent;
+    color: #FF521B;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4375rem;
+    line-height: 45px;
+    border: 2px solid black;
+
+}
+
+@media screen  and (max-width: 600px){
+    body{
+        overflow-x: hidden;
+        background-image: url(Images/3\ lines\ hexa.png);
+        background-repeat: no-repeat;
+        background-position: right  top;
+        background-size: 100%;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    nav ul, nav button{
+        display: none;
+    }
+    nav label{
+        margin-left: 1rem;
+    }
+    .header-container{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        margin-top: 0;
+    }
+    .header-text h1{     
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8125rem;
+    line-height: 2.75rem;
+    text-align: center;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+     display: block;
+    }
+    .header-container p{
+        width: 80%;
+        height: 84px;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .header-img img{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .header-text .explore{
+        width: 40%;
+        height: 3rem;
+        background: #171717;
+        border: 2px solid #171717;
+        border-radius: 10px;
+        color: white;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 45px;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .header-text .create{
+        width: 40%;
+        height: 3rem;
+        border-radius: 10px;
+        background: transparent;
+        color: #FF521B;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 45px;
+        border: 2px solid black;
+    
+    }
+    .header-container .head-btn-container{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:601px) and (max-width:1204px){
+    body{
+        overflow-x: hidden;
+        background-image: url(Images/3\ lines\ hexa.png);
+        background-repeat: no-repeat;
+        background-position: right  top;
+        background-size: 100%;
+    }
+    nav{
+        justify-content: space-between;
+    }
+    nav ul, nav button{
+        display: none;
+    }
+    nav label{
+        margin-left: 1rem;
+    }
+    .header-container{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        margin-top: 0;
+    }
+    .header-text h1{     
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8125rem;
+    line-height: 2.75rem;
+    text-align: center;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+     display: block;
+    }
+    .header-container p{
+        width: 80%;
+        height: 84px;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .header-img img{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .header-text .explore{
+        width: 40%;
+        height: 3rem;
+        background: #171717;
+        border: 2px solid #171717;
+        border-radius: 10px;
+        color: white;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 45px;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .header-text .create{
+        width: 40%;
+        height: 3rem;
+        border-radius: 10px;
+        background: transparent;
+        color: #FF521B;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 45px;
+        border: 2px solid black;
+    
+    }
+    .header-container .head-btn-container{
+        text-align: center;
+    }
+}
