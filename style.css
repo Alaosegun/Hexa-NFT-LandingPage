@@ -98,6 +98,7 @@ nav button{
     justify-content: space-evenly;
     margin-top: 3rem;
 }
+
 .header-text h1{
     font-family: 'Sora';
     font-style: normal;
@@ -155,7 +156,28 @@ nav button{
     border: 2px solid black;
 
 }
-
+.second-head-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+div.amount{
+    display: flex;
+    gap: 3rem;
+    width: 35%;
+}
+div.amount h3{
+    font-size: 2rem;
+}
+.under-head-img-container{
+    width: 28em;
+    height: 5rem;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 8px;
+}
 @media screen  and (max-width: 600px){
     body{
         overflow-x: hidden;
@@ -272,6 +294,33 @@ nav button{
     }
     .header-container .head-btn-container{
         text-align: center;
+    }
+    .second-head-container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+    div.amount{
+        display: flex;
+        gap: 3rem;
+        width: 90%;
+    }
+    div.amount h3{
+        font-size: 1.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 1rem;
+    }
+    .under-head-img-container{
+        width: 90%;
+        height: 4.2rem;
+        background-color: white;
+        border: 4px solid black;
+        border-radius: 8px;
     }
 }
 
