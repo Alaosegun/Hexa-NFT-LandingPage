@@ -39,24 +39,14 @@ nav{
     width: 100%;
 }
 nav label{
-    margin-top: 0.9rem;
+    margin-top: 0rem;
     display: flex;
 }
-
-.hexa-logo{
+nav label img{
     width: 70%;
-    height: 7%;
 }
-nav label h3{
-    color: #FF521B;
-    font-family: 'Sora';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.5rem;
-    position: relative;
-    top: 1.4rem;
-    
-}
+
+
 nav ul{
     margin-top: 0.8rem;
 }
@@ -261,17 +251,63 @@ div.amount h3{
     margin-top: 7rem;
     height: 52rem;
 }
+
 .top-collections-container{
     display: flex;
     align-items: center;
     overflow-x: scroll;
     flex-shrink: 0;
-    /* margin-left: 11%; */
+    gap: 4rem;
+    margin-left: 11%;
     width: 100%;
     margin-top: 3rem;
 }
-.top-collections-container img{
-    width: 28rem;
+
+
+
+.slider1, .slider2, .slider3, .slider4, .slider5, .slider6{
+    width: 25%;
+    flex-grow: 1;
+    margin-bottom: 3rem;
+}
+.slider6{
+    margin-right: 14rem;
+}
+.avatar-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 5rem;
+}
+.avatar-pic{
+    width: 37%;
+    margin-left: 4rem;
+}
+.avatar-text h3{
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 68px;
+    width: 70%;
+}
+.avatar-text p{
+    width: 30rem;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 3rem;
+    text-align: justify;
+}
+.avatar button{
+    width: 18rem;
+    height: 3rem;
+    background: #171717;
+    border-radius: 10px;
+    color: white;
+    font-family: sora;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
 }
 @media screen  and (max-width: 600px){
     body{
@@ -301,22 +337,15 @@ div.amount h3{
     nav ul, nav button{
         display: none;
     }
-    .hexa-logo{
-        width: 80%;
-        height: 80%;
-    }
+  
     nav label{
         margin-top: 0.5rem;
         margin-left: 0.2rem;
-        display: flex;
     }
-    nav label h3{
-        color: #FF521B;
-        font-family: 'Sora';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1rem;
+    nav label img{
+        width: 60%;
     }
+   
     .bi-search{
         font-size: 1.5rem;
         margin-right: 1rem;
@@ -474,6 +503,100 @@ div.amount h3{
      display: none;
     
     }
+    .top-flex{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-flex h3{
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-left: 0;
+    }
+    .top-flex h4{
+        color: #FF521B;
+        font-size: 1.4rem;
+        margin-right: 6%;
+        border: 2px solid black;
+        width: 70%;
+        text-align: center;
+    }
+    .top-collections{
+        background-image: url(./Images/top-collections3lines.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-top: 7rem;
+        height: fit-content;
+        margin-bottom: 3rem;
+    }
+    .top-collections-container{
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        flex-shrink: 0;
+        gap: 2rem;
+        margin-left: 1rem;
+        width: 100%;
+        margin-top: 3rem;
+    }
+
+    .slider1, .slider2, .slider3, .slider4, .slider5, .slider6{
+        width: 80%;
+    }
+    .slider6{
+        margin-right: 3rem;
+    }
+    .avatar-container{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+    .avatar-pic{
+        width: 80%;
+    }
+    .avatar-text h3{
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 3rem;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+    
+    }
+    .avatar-text p{
+        width: 91%;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 3rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .avatar button{
+        width: 70%;
+        height: 3rem;
+        background: #171717;
+        border-radius: 10px;
+        color: white;
+        font-family: sora;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 0.8rem;
+        margin-bottom: 1rem;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    }
+   
 }
 
 @media screen and (min-width:601px) and (max-width:1204px){
