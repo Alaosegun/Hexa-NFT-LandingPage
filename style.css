@@ -249,10 +249,11 @@ div.amount h3{
         justify-content: space-between;
         width: 100%;
         height: 80px;
-        border-bottom: 2px solid gray;
         position: fixed;
         z-index: 1;
-        background: linear-gradient(10deg, #f4f3d2 -2.34%, rgb(255, 255, 243) 27.89%, #f6f6e5 56.92%, rgba(255, 255, 243, 0.92) 86.54%, rgb(233, 233, 206) 113.75%); 
+        background: #FFFEE3;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.22);
+
     }
     
     nav ul, nav button{
