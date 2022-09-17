@@ -38,6 +38,9 @@ nav{
     /* position: fixed; */
     width: 100%;
 }
+.mobile-search-btn .bi-search{
+    display: none;
+}
 #check{
     display: none;
 }
@@ -47,6 +50,8 @@ nav{
 nav label{
     margin-top: 0rem;
     display: flex;
+ position: relative;
+ right: 9%;
 }
 nav label img{
     width: 70%;
@@ -54,6 +59,8 @@ nav label img{
 }
 nav ul{
     margin-top: 0.8rem;
+    position: relative;
+    right: 6%;
 }
 nav ul li{
     display: inline;
@@ -239,10 +246,40 @@ div.amount h3{
     display: flex;
     justify-content: space-between;
 }
+.top-coins-container{
+    display: flex;
+}
 .top-flex h3{
-    font-size: 1.625rem;
+    font-size: 1.64rem;
     font-weight: 600;
+}
+.top-coins-container{
     margin-left: 11%;
+    gap: 1.5rem;
+}
+.eth-btn{
+    width: 3.3rem;
+    height: 3.3rem;
+    background-color: white;
+    border-radius: 2.55314px;
+    box-shadow: black 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    cursor: pointer;
+    margin-right: 1rem;
+  
+}
+.sol-btn, .kebab-menu{
+    width: 3.3rem;
+    height: 3.3rem;
+    background-color: black;
+    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    border-radius: 2.55314px;
+    cursor: pointer;
+    margin-right: 1rem;
+   
+}
+.sol-btn:focus, .kebab-menu:focus, .eth-btn:focus{
+    transform: scale(0.9);
+    transition: .3s ease-in-out;
 }
 .top-flex h4{
     color: #FF521B;
@@ -347,6 +384,9 @@ div.amount h3{
     html{
         overflow-x: hidden;
     }
+    nav label{
+     right: 0%;
+    }
     .nav-logo img{
         width: 65%;
         margin-left: 1rem;
@@ -356,7 +396,7 @@ div.amount h3{
         display: none;
     }
     .menu-icon{
-       width: 2.375rem;
+       width: 2rem;
        display: block;
        margin-right: 1.8rem;
     }
@@ -386,6 +426,11 @@ div.amount h3{
         transition: ease-in .5s;
         flex-direction: column;
         text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+
+        
        
     
     }
@@ -393,8 +438,9 @@ div.amount h3{
         display: block;
         right: 0rem;
         position: relative;
-        line-height: 0.8rem;
+        line-height: 0.1rem;
         text-transform: uppercase;
+        margin: 1.5rem;
     }
     nav ul li a{
         font-size: 1rem;
@@ -411,9 +457,10 @@ div.amount h3{
         display: none;
     }
     .mobile-search-btn .bi-search{
-        font-size: 1.8rem;
+        font-size: 1rem;
         margin-right: 1.5rem;
-        line-height: 2.2;
+        line-height: 4.2;
+        display: block;
     }
    
     .nav-button-section .bi-search{
@@ -573,7 +620,7 @@ div.amount h3{
     .top-flex h3{
         font-size: 1.5rem;
         font-weight: 600;
-        margin-left: 0;
+        margin-left: 0%;
     }
     .top-flex h4{
         color: #FF521B;
@@ -583,6 +630,43 @@ div.amount h3{
         width: 70%;
         text-align: center;
     }
+    
+.top-coins-container{
+    display: flex;
+    margin-left: 0%;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.eth-btn{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 2.55314px;
+    box-shadow: black 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    cursor: inherit;
+    margin-right: 0;
+    margin: 0.8rem;
+  
+}
+.sol-btn, .kebab-menu{
+    width: 3rem;
+    height: 3rem;
+    background-color: black;
+    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    border-radius: 2.55314px;
+    cursor: inherit;
+    margin: 0.8rem;
+    margin-right: 0;
+   
+}
+.btn-3{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
     .top-collections{
         background-image: url(./Images/top-collections3lines.png);
         background-repeat: no-repeat;
@@ -672,7 +756,10 @@ div.amount h3{
         border: 2px solid black;
         padding: 1rem;
         border-radius: 20px;
-        width: 85%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
    
 }
