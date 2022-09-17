@@ -317,8 +317,21 @@ div.amount h3{
     font-size: 0.9rem;
     box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
 }
-.next{
-    text-align: center;
+.life-nft-container{
+    /* display: grid; */
+    grid-template-columns: repeat(3, 1fr);
+   text-align: center;
+    
+}
+.life-nft-container img{
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+.life-1, .life-2, .life-3, .life-4, .life-5, .life-6{
+    border: 2px solid black;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 25%;
 }
 @media screen  and (max-width: 600px){
     body{
@@ -404,7 +417,7 @@ div.amount h3{
     }
    
     .nav-button-section .bi-search{
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         margin-right: 1rem;
         display: none;
      
@@ -648,6 +661,18 @@ div.amount h3{
         margin-bottom: 1rem;
         
         box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    }
+    .life-nft-container{
+        /* display: grid; */
+        grid-template-columns: (1, 1fr);
+       text-align: center;
+        
+    }
+    .life-1, .life-2, .life-3, .life-4, .life-5, .life-6{
+        border: 2px solid black;
+        padding: 1rem;
+        border-radius: 20px;
+        width: 85%;
     }
    
 }
