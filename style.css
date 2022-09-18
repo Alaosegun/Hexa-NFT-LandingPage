@@ -20,6 +20,12 @@ html{
     height: 100%;
     background: linear-gradient(180deg, #FFFEE3 -2.34%, rgba(255, 255, 243, 0.92) 27.89%, #FEFEF4 56.92%, rgba(255, 255, 243, 0.92) 86.54%, rgba(254, 254, 228, 0.92) 113.75%); 
 }
+
+@keyframes bounce {
+    to{
+        transform: scale(0.9);
+    }
+}
 body{
    
     background-image: url(Images/3\ lines\ hexa.png);
@@ -172,6 +178,11 @@ nav button{
     margin-top: 1.2rem;
     box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
 }
+.header-text .explore:focus, .header-text .create:focus{
+    -webkit-animation: bounce .3s  alternate;
+    -moz-animation: bounce .3s  alternate ;
+    animation: bounce .3s  alternate;
+}
 .header-text .create{
     width: 30%;
     height: 60px;
@@ -257,6 +268,29 @@ div.amount h3{
     margin-left: 11%;
     gap: 1.5rem;
 }
+.top-dropdown-container{
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 4rem;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 158px;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+}
+.top-dropdown-container:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #000;
+    color: rebeccapurple;
+}
+
 .eth-btn{
     width: 3.3rem;
     height: 3.3rem;
@@ -277,9 +311,10 @@ div.amount h3{
     margin-right: 1rem;
    
 }
-.sol-btn:focus, .kebab-menu:focus, .eth-btn:focus{
-    transform: scale(0.9);
-    transition: .3s ease-in-out;
+.eth-btn:focus, .sol-btn:focus, .kebab-menu:focus{
+    -webkit-animation: bounce .3s  alternate;
+    -moz-animation: bounce .3s  alternate ;
+    animation: bounce .3s  alternate;
 }
 .top-flex h4{
     color: #FF521B;
@@ -426,9 +461,7 @@ div.amount h3{
         transition: ease-in .5s;
         flex-direction: column;
         text-align: center;
-        justify-content: center;
-        align-items: center;
-        display: flex;
+       
 
         
        
@@ -440,7 +473,7 @@ div.amount h3{
         position: relative;
         line-height: 0.1rem;
         text-transform: uppercase;
-        margin: 1.5rem;
+        margin: 3rem;
     }
     nav ul li a{
         font-size: 1rem;
@@ -458,10 +491,11 @@ div.amount h3{
     }
     .mobile-search-btn .bi-search{
         font-size: 1rem;
-        margin-right: 1.5rem;
+        margin-right: 0rem;
         line-height: 4.2;
         display: block;
     }
+    
    
     .nav-button-section .bi-search{
         font-size: 1.1rem;
@@ -618,55 +652,56 @@ div.amount h3{
         align-items: center;
     }
     .top-flex h3{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-weight: 600;
         margin-left: 0%;
+        text-align: center;
     }
     .top-flex h4{
         color: #FF521B;
         font-size: 1.4rem;
-        margin-right: 6%;
+        margin-right: 0%;
         border: 2px solid black;
-        width: 70%;
+        /* width: 70%; */
         text-align: center;
     }
     
-.top-coins-container{
-    display: flex;
-    margin-left: 0%;
-    gap: 1.5rem;
-    flex-direction: column;
-    align-items: center;
-}
+    .top-coins-container{
+        display: flex;
+        margin-left: 0%;
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
 
 
-.eth-btn{
-    width: 3rem;
-    height: 3rem;
-    background-color: white;
-    border-radius: 2.55314px;
-    box-shadow: black 3px 3px 0 0, #000 3px 3px 0 0.5px;
-    cursor: inherit;
-    margin-right: 0;
-    margin: 0.8rem;
-  
-}
-.sol-btn, .kebab-menu{
-    width: 3rem;
-    height: 3rem;
-    background-color: black;
-    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
-    border-radius: 2.55314px;
-    cursor: inherit;
-    margin: 0.8rem;
-    margin-right: 0;
-   
-}
-.btn-3{
-    margin-right: auto;
-    margin-left: auto;
-    display: block;
-}
+    .eth-btn{
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        border-radius: 2.55314px;
+        box-shadow: black 3px 3px 0 0, #000 3px 3px 0 0.5px;
+        cursor: inherit;
+        margin-right: 0;
+        margin: 0.8rem;
+    
+    }
+    .sol-btn, .kebab-menu{
+        width: 3rem;
+        height: 3rem;
+        background-color: black;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+        border-radius: 2.55314px;
+        cursor: inherit;
+        /* margin: 0.8rem; */
+        margin-right: 1rem;
+    
+    }
+    .btn-3{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
     .top-collections{
         background-image: url(./Images/top-collections3lines.png);
         background-repeat: no-repeat;
