@@ -538,6 +538,8 @@ div.amount h3{
         margin-right: 0rem;
         line-height: 4.2;
         display: block;
+        position: relative;
+        left: 1rem;
     }
     
    
