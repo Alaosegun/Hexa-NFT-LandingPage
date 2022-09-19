@@ -19,7 +19,7 @@ html{
     overflow-x: hidden;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #FFFEE3 -2.34%, rgba(255, 255, 243, 0.92) 27.89%, #FEFEF4 56.92%, rgba(255, 255, 243, 0.92) 86.54%, rgba(254, 254, 228, 0.92) 113.75%); 
+    background-color: #FEFEF4;
 }
 
 @keyframes bounce {
@@ -39,11 +39,13 @@ body{
 nav{
     display: flex;
     justify-content: space-evenly;
-    line-height: inherit;
+    line-height: 8px;
     height: 90px; 
     font-family: poppins;
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
+    z-index: 1;
+    background-color: #FEFEF4;
 }
 .mobile-search-btn .bi-search{
     display: none;
@@ -101,10 +103,6 @@ nav button{
     font-size: 2rem;
     color: inherit;
 }
-.nav-button-section{
-    
-    /* display: flex; */
-}
 .nav-button-section img{
     width: inherit;
     height: inherit;
@@ -115,16 +113,8 @@ nav button{
     z-index: 1;
     width: 35rem;
     margin-top: 9rem;
-    margin-top: 4rem;
+    margin-top: 8 rem;
 
-}
-
-.hero2-img{
-    position: absolute;
-    z-index: -1;
-    right: 9%;
-    top: 8rem;
-    width: 36.5%;
 }
 .header-container{
     display: flex;
@@ -133,7 +123,7 @@ nav button{
     
 }
 .header-text{
-    margin-top: 4rem;
+    margin-top: 8rem;
 }
 .header-text h1{
     font-family: 'Sora';
@@ -270,14 +260,11 @@ div.amount h3{
     font-size: 1.6rem;
     padding: 0.4rem;
 }
-.top-flex h4:hover{
+.top-flex h4:hover, .top-sellers h4:hover, .life-nft h4:hover{
     background-color: #FF521B;
     color: white;
     border-radius: 4px;
 }
-/* .drop-down-icon:hover{
-    fill: white;
-} */
 .top-coins-container{
     margin-left: 11%;
     gap: 1.5rem;
@@ -288,13 +275,22 @@ div.amount h3{
     margin-right: 10%;
    
 }
-
-.dropdown-content{
+.top-flex .dropdown-content{
     display: none;
     position: absolute;
     background: white;
     box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
     z-index: 1;
+    width: 120px;
+    padding: 0.3rem;
+}
+.top-sellers .dropdown-content, .life-nft .dropdown-content{
+    display: none;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    width: 10.5625rem;
     padding: 0.3rem;
 }
 .top-dropdown-container:hover .dropdown-content{
@@ -304,15 +300,24 @@ div.amount h3{
     line-height: 2;
     list-style: none;
 }
+.top-flex .dropdown-content a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: black;
+    padding: 0.2rem;
+
+}
 .dropdown-content a{
     text-decoration: none;
     font-size: 1.2rem;
     color: black;
-    padding: 0.5rem;
+    padding: 0.2rem;
+   
 
 }
 .dropdown-content a:hover{
     background-color: rgb(230, 230, 234);
+    
 }
 
 .eth-btn{
@@ -431,6 +436,7 @@ div.amount h3{
 .life-top-flex h4{
     font-size: 1.625rem;
     color: #FF521B;
+    padding: 0.4rem;
 }
 .life-nft-container img{
     margin-bottom: 2rem;
@@ -459,10 +465,12 @@ div.amount h3{
 .top-sellers-container ol{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    margin: 0 auto;
   
 }
 .top-sellers-container ol img{
-    width: 85%;
+    width: 95%;
     margin: 0 auto;
     margin-bottom: 1.5rem;
 }
@@ -480,6 +488,65 @@ div.amount h3{
     border: none;
     box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
     margin-bottom: 3rem;
+}
+.seller-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.seller-header h3{
+    font-weight: 600;
+    font-size: 2.25rem;
+    margin-left: 11%;
+}
+.seller-header h4{
+    font-size: 1.625rem;
+    color: #FF521B;
+    padding: 0.4rem;
+} 
+.your-nft{
+    margin-top: 8rem;
+}
+.your-nft h3{
+    margin-bottom: 5rem;
+    margin-left: 10%;
+    font-size: 1.6rem;
+}
+.your-nft-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+.your-nft-container p{
+    line-height: 1.5rem;
+}
+.own-1, .own-2, .own-3, .own-4{
+    width: 18rem;
+    height:fit-content;
+    background: rgba(235, 235, 235, 0.7);
+    border: 1.96242px solid #FFFFFF;
+    backdrop-filter: blur(0.784968px);
+    border-radius: 22px;
+    text-align: center;
+}
+.own-2 img , .own-3 img, .own-4 img{
+    width: 30%;
+    position: relative;
+    bottom: 3rem;
+}
+.own-1 img{
+    width: 36%;
+    position: relative;
+    bottom: 3rem;
+}
+.own1-text, .own2-text, .own3-text, .own4-text{
+    position: relative;
+    bottom: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8rem;
 }
 @media screen  and (max-width: 600px){
     body{
@@ -516,7 +583,601 @@ div.amount h3{
         justify-content: space-between;
         flex-direction: row-reverse;
         width: 100%;
+        height: 3.4rem;
+        position: fixed;
+        z-index: 2;
+        background: #FFFEE3;
+        box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.22);
+
+    }
+    
+     nav button{
+        display: none;
+    }
+    nav ul{
+        position: fixed;
+        width: 60%;
+        height: 100vh;
+        background: #FF521B;
+        top: 0rem;
+        left: -70%;
+        margin-top: 3.5rem;
+        transition: ease-in .5s;
+        flex-direction: column;
+        text-align: left;
+       
+    
+    }
+    nav ul li{
+        display: block;
+        right: 0rem;
+        position: relative;
+        line-height: 0.1rem;
+        text-transform: uppercase;
+        margin: 2rem;
+        position: relative;
+        top: 8%;
+    }
+    nav ul li a{
+        font-size: 1.1rem;
+        color: black;
+    }
+    a:hover,a.active{
+        background: none;
+        color: gray;
+    }
+    #check:checked~ ul {
+        left: 0;
+    }
+    .nav-button-section{
+        display: none;
+    }
+    .mobile-search-btn .bi-search{
+        font-size: 1rem;
+        margin-right: 0rem;
+        line-height: 3.3;
+        display: block;
+        position: relative;
+        left: 1rem;
+    }
+    
+   
+    .nav-button-section .bi-search{
+        font-size: 1.1rem;
+        margin-right: 1rem;
+        display: none;
+     
+    }
+    .header-container{
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        margin-top: 0;
+    }
+    .header-text{
+        margin-top: 5rem;
+    }
+   
+    .header-text h1{     
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8125rem;
+    line-height: 2.75rem;
+    text-align: center;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+     display: block;
+    }
+    .header-container p{
+        width: 80%;
+        height: 84px;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-bottom: 1rem;
+    }
+    .hero1-img{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        z-index: 1;
+        margin-top: 0;
+    }
+
+    .header-text .explore{
+        width: 40%;
         height: 3rem;
+        background: #171717;
+        border: 2px solid #171717;
+        border-radius: 10px;
+        color: white;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 45px;
+        margin-top: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .header-text .create{
+        width: 40%;
+        height: 3rem;
+        border-radius: 10px;
+        background: transparent;
+        color: #FF521B;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 45px;
+        border: 2px solid black;
+    
+    }
+    .header-container .head-btn-container{
+        text-align: center;
+    }
+    .second-head-container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    div.amount{
+        display: flex;
+        gap: 3rem;
+        width: 90%;
+    }
+    div.amount h3{
+        font-size: 1.4rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 1rem;
+    }
+    .under-head-img-container{
+        width: 95%;
+        height: fit-content;
+        background-color: white;
+        border: 4px solid black;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+    
+    .amount-orange-container{
+        display: flex;
+        gap: 0rem;
+        margin-left: 0;
+        color: #FF521B;
+        font-weight: 600;
+        position: relative;
+        bottom: 1.5rem;
+       
+    }
+    .amount-orange-container h4{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .bid-time-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .bid-time-container h3{
+        color: #FF521B;
+        margin-top: 1rem;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+    .bid-features{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 0.4rem;
+        margin-bottom: 0.6rem;
+        font-weight: 700;
+        font-size: 0.7rem;
+    }
+    .bid-img{
+     display: none;
+    
+    }
+    .top-flex{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-flex h3{
+        font-size: 1.7rem;
+        font-weight: 600;
+        margin-left: 0%;
+        text-align: center;
+    }
+   
+    
+    .top-coins-container{
+        display: flex;
+        margin-left: 0%;
+        gap: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .eth-btn{
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        border-radius: 2.55314px;
+        box-shadow: black 3px 3px 0 0, #000 3px 3px 0 0.5px;
+        cursor: inherit;
+        margin-right: 0;
+        margin: 0.8rem;
+    
+    }
+    .sol-btn, .kebab-menu{
+        width: 3rem;
+        height: 3rem;
+        background-color: black;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+        border-radius: 2.55314px;
+        cursor: inherit;
+        /* margin: 0.8rem; */
+        margin-right: 1rem;
+    
+    }
+    .btn-3{
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+    .top-collections{
+        background-image: url(./Images/top-collections3lines.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        margin-top: 7rem;
+        height: fit-content;
+        margin-bottom: 3rem;
+    }
+    .top-collections-container{
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        flex-shrink: 0;
+        gap: 2rem;
+        margin-left: 1rem;
+        width: 100%;
+        margin-top: 3rem;
+    }
+    
+    .top-flex h4{
+        color: #FF521B;
+        font-size: 1.4rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 90%;
+        padding: 0.4rem;
+        border-radius: 3px;
+        border: 2px solid black;
+        background-color: transparent;
+        
+    }
+    .top-coins-container{
+        margin-left: 0%;
+        gap: 1.5rem;
+    }
+    .top-dropdown-container{
+        overflow: hidden;
+        cursor: inherit;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70%;
+        margin: auto;
+       text-align: center;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+    }
+    .top-dropdown-container:hover .dropdown-content{
+        display: block;
+    }
+    .dropdown-content li{
+        line-height: 2;
+        list-style: none;
+        
+    }
+    .dropdown-content a{
+        text-decoration: none;
+        font-size: 1.2rem;
+        color: black;
+        
+
+    }
+    .dropdown-content a:hover{
+        color: #FF521B;
+        background-color: wheat;
+    }
+
+    .slider1, .slider2, .slider3, .slider4, .slider5, .slider6{
+        width: 70%;
+        margin-right: 1rem;
+    }
+    .slider6{
+        margin-right: 3rem;
+    }
+    .avatar-container{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+    .avatar-pic{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .avatar-text h3{
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: normal;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
+    
+    }
+    .avatar-text p{
+        width: 91%;
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 2rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 1rem;
+    }
+    .avatar button{
+        width: 70%;
+        height: 3rem;
+        background: #171717;
+        border-radius: 10px;
+        color: white;
+        font-family: sora;
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: 0.8rem;
+        margin-bottom: 1rem;
+        
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    }
+    .life-nft{
+        margin-top: 3rem;
+    }
+    .life-nft-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+
+    }
+    .life-1, .life-2, .life-3, .life-4, .life-5, .life-6{
+        border: 2px solid black;
+        padding: 0.7rem;
+        border-radius: 10px;
+        width: 95%;
+    }
+    .life-top-flex{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+    }
+    .life-top-flex h3{
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-left: 0%;
+        text-align: center;
+    }
+    .life-top-flex h4{
+        font-size: 1rem;
+        padding: 0.4rem;
+        color: #FF521B;
+        background: transparent;
+        border: 2px solid black ;
+        width: 90%;
+        border-radius: 3px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .life-nft-container img{
+        margin-bottom: 1rem;
+        margin-left: 0rem;
+    }
+    .life-nft-btn{
+        width: 70%;
+        height: 3.125rem;
+        background: #171717;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 22px;
+        color: white;
+        margin-left:auto;
+        margin-right: auto;
+        display: block;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+        margin-bottom: 2rem;
+       
+    }
+    .top-sellers{
+        margin-top: 5rem;
+    }
+    .top-sellers-container ol{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        width: 95%;
+      
+    }
+    .top-sellers-container ol img{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+    }
+    .top-sellers-btn{
+        width: 70%;
+        height: 3.125rem;
+        background: #171717;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 22px;
+        color: white;
+        margin-left:auto;
+        margin-right: auto;
+        display: block;
+        border: none;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+        margin-bottom: 3rem;
+    }
+    .seller-header{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    .seller-header h3{
+        font-weight: 600;
+        font-size: 1.6rem;
+        margin-left: 0%;
+        text-align: center;
+        
+    }
+    .seller-header h4{
+        font-size: 1rem;
+        padding: 0.4rem;
+        color: #FF521B;
+        background: transparent;
+        border: 2px solid black ;
+        width: 90%;
+        border-radius: 3px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    } 
+    
+.your-nft-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.your-nft-container p{
+    line-height: 1.5rem;
+}
+.your-nft h3{
+    margin-bottom: 5rem;
+    margin-left: 0%;
+   text-align: center;
+    font-size: 1.3rem;
+}
+.own-1, .own-2, .own-3, .own-4{
+    width: 80%;
+    height:fit-content;
+    background: rgba(235, 235, 235, 0.7);
+    border: 1.96242px solid #FFFFFF;
+    backdrop-filter: blur(0.784968px);
+    border-radius: 9.41962px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.own-2 img , .own-3 img, .own-4 img{
+    width: 30%;
+    position: relative;
+    bottom: 3rem;
+}
+.own-1 img{
+    width: 36%;
+    position: relative;
+    bottom: 3rem;
+}
+.own1-text, .own2-text, .own3-text, .own4-text{
+    position: relative;
+    bottom: 2rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8rem;
+}
+
+   
+}
+
+@media screen and (min-width:601px) and (max-width:1204px){
+    body{
+        overflow-x: hidden;
+        background-image: none;
+        background: #FFFEE3;
+        
+    }
+    main{
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    nav label{
+     right: 0%;
+    }
+    .nav-logo img{
+        width: 65%;
+        margin-left: 1rem;
+        
+    }
+    #check{
+        display: none;
+    }
+    .menu-icon{
+       width: 1.8rem;
+       display: block;
+       margin-right: 1.8rem;
+    }
+    nav{
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 3.4rem;
         position: fixed;
         z-index: 1;
         background: #FFFEE3;
@@ -568,7 +1229,7 @@ div.amount h3{
     .mobile-search-btn .bi-search{
         font-size: 1rem;
         margin-right: 0rem;
-        line-height: 4.2;
+        line-height: 3.3;
         display: block;
         position: relative;
         left: 1rem;
@@ -975,6 +1636,7 @@ div.amount h3{
     .top-sellers-container ol{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
+        width: 95%;
       
     }
     .top-sellers-container ol img{
@@ -997,94 +1659,21 @@ div.amount h3{
         box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
         margin-bottom: 3rem;
     }
-
-   
-}
-
-@media screen and (min-width:601px) and (max-width:1204px){
-    body{
-        overflow-x: hidden;
-        background-image: url(Images/3\ lines\ hexa.png);
-        background-repeat: no-repeat;
-        background-position: right  top;
-        background-size: 100%;
-    }
-    nav{
-        justify-content: space-between;
-    }
-    nav ul, nav button{
-        display: none;
-    }
-    nav label{
-        margin-left: 1rem;
-    }
-    .header-container{
+    .seller-header{
         display: flex;
+        justify-content: space-between;
         flex-direction: column;
-        /* align-items: center; */
-        margin-top: 0;
-    }
-    .header-text h1{     
-    font-style: normal;
-    font-weight: 600;
-    font-size: 1.8125rem;
-    line-height: 2.75rem;
-    text-align: center;
-    width: 97%;
-    margin-left: auto;
-    margin-right: auto;
-     display: block;
-    }
-    .header-container p{
-        width: 80%;
-        height: 84px;
-        font-family: 'Sora';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        margin-bottom: 1rem;
-    }
-    .header-img img{
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-    }
-    .header-text .explore{
-        width: 40%;
-        height: 3rem;
-        background: #171717;
-        border: 2px solid #171717;
-        border-radius: 10px;
-        color: white;
-        font-family: 'Sora';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 1.1rem;
-        line-height: 45px;
-        margin-top: 1.2rem;
         margin-bottom: 2rem;
     }
-    .header-text .create{
-        width: 40%;
-        height: 3rem;
-        border-radius: 10px;
-        background: transparent;
-        color: #FF521B;
-        font-family: 'Sora';
-        font-style: normal;
+    .seller-header h3{
         font-weight: 600;
-        font-size: 1.1rem;
-        line-height: 45px;
-        border: 2px solid black;
-    
-    }
-    .header-container .head-btn-container{
+        font-size: 1.7rem;
+        margin-left: 0%;
         text-align: center;
     }
+    .seller-header h4{
+        font-size: 1.625rem;
+        color: #FF521B;
+        padding: 0.4rem;
+    } 
 }
