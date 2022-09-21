@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     outline: 0;
+    user-select: none;
 }
 img{
     pointer-events: none;
@@ -375,11 +376,15 @@ div.amount h3{
 .slider6{
     margin-right: 14rem;
 }
+.avatar{
+   
+}
 .avatar-container{
     display: flex;
     justify-content: space-evenly; 
     align-items: center;
     gap: 5rem;
+    width: 100%;
 }
 .avatar-pic{
     width: 37%;
@@ -548,6 +553,88 @@ div.amount h3{
     margin-right: auto;
     font-size: 0.8rem;
 }
+.label-container label img{
+    margin-bottom: 2rem;
+}
+.bi-twitter, .bi-instagram, .bi-discord, .e-mail{
+    margin-right: 0.7rem;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 2.5rem;
+    margin-top: 7rem;
+}
+.footer-container{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+footer h3{
+    color: #FF521B;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+}
+footer ul{
+    line-height: 2.3;
+    list-style: none;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+
+}
+.label-container p{
+    width: 24.555rem;
+    font-family: 'Sora';
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+.updates p{
+    width: 24.555rem;
+    font-family: 'Sora';
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+.label-container svg{
+    width: 3rem;
+    height: 3rem;
+    fill: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 7px;
+    box-shadow: #000 3px 3px 0 0, #fff 3px 3px 0 0.5px;
+   
+}
+.social-icons{
+
+}
+.footer-hl-container{
+    margin: 0 auto;
+}
+.footer-hl{
+    border-bottom: 2px solid white;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+.copyright-section{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+.copyright-section  .copyright-p1{
+    margin-left: 5%;
+}
+.copyright-section div{
+    display: flex;
+    gap: 2rem;
+    margin-right: 7%;
+}
 @media screen  and (max-width: 600px){
     body{
         overflow-x: hidden;
@@ -578,6 +665,7 @@ div.amount h3{
        width: 1.8rem;
        display: block;
        margin-right: 1.8rem;
+       z-index: 4;
     }
     nav{
         justify-content: space-between;
@@ -596,15 +684,16 @@ div.amount h3{
     }
     nav ul{
         position: fixed;
-        width: 60%;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
+        margin-top: 0rem;
         background: #FF521B;
-        top: 0rem;
-        left: -70%;
-        margin-top: 3.5rem;
-        transition: ease-in .5s;
+        left: -100%;
+        transition: ease-out .4s;
         flex-direction: column;
-        text-align: left;
+        text-align: center;
+        justify-content: center;
+        display: flex;
        
     
     }
@@ -614,9 +703,9 @@ div.amount h3{
         position: relative;
         line-height: 0.1rem;
         text-transform: uppercase;
-        margin: 2rem;
+        margin: 0.8rem;
         position: relative;
-        top: 8%;
+        top: 0%;
     }
     nav ul li a{
         font-size: 1.1rem;
@@ -628,6 +717,7 @@ div.amount h3{
     }
     #check:checked~ ul {
         left: 0;
+        
     }
     .nav-button-section{
         display: none;
@@ -1095,48 +1185,142 @@ div.amount h3{
         display: block;
     } 
     
-.your-nft-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.your-nft-container p{
-    line-height: 1.5rem;
-}
-.your-nft h3{
-    margin-bottom: 5rem;
-    margin-left: 0%;
-   text-align: center;
-    font-size: 1.3rem;
-}
-.own-1, .own-2, .own-3, .own-4{
-    width: 80%;
-    height:fit-content;
-    background: rgba(235, 235, 235, 0.7);
-    border: 1.96242px solid #FFFFFF;
-    backdrop-filter: blur(0.784968px);
-    border-radius: 9.41962px;
+    .your-nft-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .your-nft-container p{
+        line-height: 1.5rem;
+    }
+    .your-nft h3{
+        margin-bottom: 5rem;
+        margin-left: 0%;
     text-align: center;
-    margin-bottom: 3rem;
+        font-size: 1.3rem;
+    }
+    .own-1, .own-2, .own-3, .own-4{
+        width: 80%;
+        height:fit-content;
+        background: rgba(235, 235, 235, 0.7);
+        border: 1.96242px solid #FFFFFF;
+        backdrop-filter: blur(0.784968px);
+        border-radius: 9.41962px;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .own-2 img , .own-3 img, .own-4 img{
+        width: 30%;
+        position: relative;
+        bottom: 3rem;
+    }
+    .own-1 img{
+        width: 36%;
+        position: relative;
+        bottom: 3rem;
+    }
+    .own1-text, .own2-text, .own3-text, .own4-text{
+        position: relative;
+        bottom: 2rem;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 0.8rem;
+    }
+    .footer-container{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        
+    }
+    
+.label-container label img{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
-.own-2 img , .own-3 img, .own-4 img{
-    width: 30%;
-    position: relative;
-    bottom: 3rem;
+.bi-twitter, .bi-instagram, .bi-discord, .e-mail{
+    margin-right: 0.7rem;
 }
-.own-1 img{
-    width: 36%;
-    position: relative;
-    bottom: 3rem;
+footer{
+    background: black;
+    color: white;
+    padding: 1rem;
+    margin-top: 7rem;
 }
-.own1-text, .own2-text, .own3-text, .own4-text{
-    position: relative;
-    bottom: 2rem;
-    width: 80%;
+footer h3{
+    color: #FF521B;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+}
+footer ul{
+    line-height: 2.3;
+    list-style: none;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+
+}
+.label-container p{
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.8rem;
+    font-family: 'Sora';
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-bottom: 3rem;
+}
+.updates p{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Sora';
+    font-style: normal;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+.label-container svg{
+    width: 2.1rem;
+    height: 2.1rem;
+    fill: black;
+    background-color: white;
+    padding: 8px;
+    border-radius: 7px;
+    box-shadow: #000 3px 3px 0 0, #fff 3px 3px 0 0.5px;
+   
+}
+.social-icons{
+
+}
+.footer-hl-container{
+    margin: 0 auto;
+}
+.footer-hl{
+    border-bottom: 2px solid white;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+}
+.copyright-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+}
+.copyright-section  .copyright-p1{
+    margin-left: 5%;
+}
+.copyright-section div{
+    display: flex;
+    gap: 2rem;
+    margin-right: 7%;
 }
 
    
