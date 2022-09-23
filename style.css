@@ -80,7 +80,7 @@ nav ul li a{
     text-decoration: none;
     font-size: 1.1rem;
     color: black;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 45px;
     text-transform: capitalize;
 }
@@ -514,8 +514,8 @@ div.amount h3{
 }
 .your-nft h3{
     margin-bottom: 5rem;
-    margin-left: 10%;
-    font-size: 1.6rem;
+    margin-left: 8%;
+    font-size: 1.7rem;
 }
 .your-nft-container{
     display: flex;
@@ -527,7 +527,7 @@ div.amount h3{
     line-height: 1.5rem;
 }
 .own-1, .own-2, .own-3, .own-4{
-    width: 18rem;
+    width: 20%;
     height:fit-content;
     background: rgba(235, 235, 235, 0.7);
     border: 1.96242px solid #FFFFFF;
@@ -535,13 +535,18 @@ div.amount h3{
     border-radius: 22px;
     text-align: center;
 }
+
+.your-nft h4{
+    font-size: 1.15rem;
+    
+}
 .own-2 img , .own-3 img, .own-4 img{
     width: 30%;
     position: relative;
     bottom: 3rem;
 }
 .own-1 img{
-    width: 36%;
+    width: 30%;
     position: relative;
     bottom: 3rem;
 }
@@ -551,10 +556,28 @@ div.amount h3{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.8rem;
+    font-size: 0.98rem;
+}
+.your-nft p{
+    margin-top: 0.6rem;
 }
 .label-container label img{
     margin-bottom: 2rem;
+}
+.your-nft-btn{
+    width: 13rem;
+    height: 4rem;
+    background: #171717;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 22px;
+    color: white;
+    margin-left:auto;
+    margin-right: auto;
+    display: block;
+    border: none;
+    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    margin-top: 3rem;
 }
 .bi-twitter, .bi-instagram, .bi-discord, .e-mail{
     margin-right: 0.7rem;
@@ -563,7 +586,7 @@ footer{
     background: black;
     color: white;
     padding: 2.5rem;
-    margin-top: 7rem;
+    margin-top: 5rem;
 }
 .footer-container{
     display: flex;
@@ -574,6 +597,7 @@ footer h3{
     color: #FF521B;
     margin-bottom: 1rem;
     text-transform: capitalize;
+   
 
 }
 footer ul{
@@ -622,7 +646,6 @@ footer ul{
     margin-top: 2rem;
 }
 .copyright-section{
-    display: flex;
     justify-content: space-between;
     margin-top: 2rem;
     font-size: 0.9rem;
@@ -634,6 +657,15 @@ footer ul{
     display: flex;
     gap: 2rem;
     margin-right: 7%;
+
+}
+.copyright-section-mobile{
+    display: flex;  
+    justify-content: space-between;
+}
+.footer-dropdown-container{
+    display: none;
+    
 }
 @media screen  and (max-width: 600px){
     body{
@@ -703,13 +735,14 @@ footer ul{
         position: relative;
         line-height: 0.1rem;
         text-transform: uppercase;
-        margin: 0.8rem;
+        margin: 0.7rem;
         position: relative;
         top: 0%;
     }
     nav ul li a{
         font-size: 1.1rem;
         color: black;
+        font-weight: lighter;
     }
     a:hover,a.active{
         background: none;
@@ -1196,20 +1229,30 @@ footer ul{
     }
     .your-nft h3{
         margin-bottom: 5rem;
-        margin-left: 0%;
-    text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+     text-align: center;
         font-size: 1.3rem;
+        width: 90%;
     }
-    .own-1, .own-2, .own-3, .own-4{
+    .own-1, .own-2, .own-3{
         width: 80%;
         height:fit-content;
         background: rgba(235, 235, 235, 0.7);
-        border: 1.96242px solid #FFFFFF;
         backdrop-filter: blur(0.784968px);
         border-radius: 9.41962px;
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        
     }
+     .own-4{
+        width: 80%;
+        height:fit-content;
+        background: rgba(235, 235, 235, 0.7);
+        backdrop-filter: blur(0.784968px);
+        border-radius: 9.41962px;
+        text-align: center;
+     }
     .own-2 img , .own-3 img, .own-4 img{
         width: 30%;
         position: relative;
@@ -1228,100 +1271,172 @@ footer ul{
         margin-right: auto;
         font-size: 0.8rem;
     }
+    .your-nft-btn{
+        width: 70%;
+        height: 3.125rem;
+        background: #171717;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 22px;
+        color: white;
+        margin-left:auto;
+        margin-right: auto;
+        display: block;
+        border: none;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    }
     .footer-container{
         display: flex;
         justify-content: space-evenly;
         flex-direction: column-reverse;
-        align-items: center;
         text-align: center;
         
     }
     
-.label-container label img{
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-.bi-twitter, .bi-instagram, .bi-discord, .e-mail{
-    margin-right: 0.7rem;
-}
-footer{
-    background: black;
-    color: white;
-    padding: 1rem;
-    margin-top: 7rem;
-}
-footer h3{
-    color: #FF521B;
-    margin-bottom: 1rem;
-    text-transform: capitalize;
+    .label-container label img{
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        width: 40%;
+    }
+    .bi-twitter, .bi-instagram, .bi-discord, .e-mail{
+        margin-right: 0.7rem;
+    }
+    footer{
+        background: black;
+        color: white;
+        padding: 1rem;
+        margin-top: 4rem;
+    }
+    footer h3{
+        color: #FF521B;
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+        font-size: 1rem;
 
-}
-footer ul{
-    line-height: 2.3;
-    list-style: none;
-    font-size: 0.9rem;
-    text-transform: capitalize;
+    }
+    footer ul{
+        line-height: 2.3;
+        list-style: none;
+        font-size: 0.9rem;
+        text-transform: capitalize;
 
-}
-.label-container p{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Sora';
-    font-style: normal;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-    margin-bottom: 3rem;
-}
-.updates p{
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Sora';
-    font-style: normal;
-    font-size: 0.9rem;
-    line-height: 1.5rem;
-}
-.label-container svg{
-    width: 2.1rem;
-    height: 2.1rem;
-    fill: black;
-    background-color: white;
-    padding: 8px;
-    border-radius: 7px;
-    box-shadow: #000 3px 3px 0 0, #fff 3px 3px 0 0.5px;
-   
-}
-.social-icons{
+    }
+    .label-container p{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Sora';
+        font-style: normal;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .updates p{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Sora';
+        font-style: normal;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    .label-container svg{
+        width: 2.1rem;
+        height: 2.1rem;
+        fill: black;
+        background-color: white;
+        padding: 8px;
+        border-radius: 7px;
+        box-shadow: #000 3px 3px 0 0, #fff 3px 3px 0 0.5px;
+    
+    }
+    .company, .market-place{
+        text-align: left;
+    }
+    .company ul, .market-place ul, .company h3, .market-place h3{
+        display: none;
+    }
+    .updates{
+        margin-bottom: 2rem;
+    }
+    .social-icons{
 
-}
-.footer-hl-container{
-    margin: 0 auto;
-}
-.footer-hl{
-    border-bottom: 2px solid white;
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
-}
-.copyright-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    text-align: center;
-    width: 100%;
-}
-.copyright-section  .copyright-p1{
-    margin-left: 5%;
-}
-.copyright-section div{
-    display: flex;
-    gap: 2rem;
-    margin-right: 7%;
-}
+    }
+    .footer-hl-container{
+        margin: 0 auto;
+    }
+    .footer-hl{
+        border-bottom: 2px solid white;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+    .copyright-section{
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    .copyright-section  .copyright-p1{
+        margin-left: 0%;
+        font-size: 0.65rem;
+        margin-top: 1rem;
+    }
+    .copyright-section div{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        gap: 0rem;
+        margin-right: 0%;
+        font-size: 0.7rem;
+    }
+    .copyright-section-mobile{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .footer-dropdown-container{
+        overflow: hidden;
+        display: block;
+      
+       
+    }
+    .footer-dropdown-container .drop-icon-container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .footer-dropdown-content{
+        display: none;
+        /* background: #FF521B; */
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        z-index: 1;
+        width: 100%;
+        padding: 0.3rem;
+        text-transform: capitalize;
+
+    
+    }
+    .footer-dropdown-content li{
+        line-height: 2;
+        list-style: none;
+    }
+    .footer-dropdown-container h4{
+        color: #FF521B;
+    }
+    
+    .footer-dropdown-container:hover .footer-dropdown-content{
+        display: block;
+    }
+    .company .footer-dropdown-container{
+        margin-bottom: 2rem;
+    }
 
    
 }

@@ -24,7 +24,7 @@
         
         <li><a href="">Home</a></li>
         <li><a href="">explore</a></li>
-        <li><a href="">marketplace</a></li>
+        <li><a href="#marketplace">marketplace</a></li>
         <li><a href="">create</a></li>
     </ul>
      <div class="nav-button-section">
@@ -109,7 +109,7 @@
             <img class="slider6" src="./Images/pic1.svg" alt="">    
         </div>
     </section>
-    <section class="avatar">
+    <section class="avatar" id="marketplace">
         <div class="avatar-container">
             <img class="avatar-pic" src="./Images/NFTSavatars_st.svg" alt="">
             <div class="avatar-text">
@@ -150,11 +150,11 @@
     <section class="top-sellers">
         <div class="seller-header">
             <h3>Our Top Sellers</h3>
-            <div class="top-dropdown-container">
-                <h4>This Week <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <div class="top-dropdown-container" >
+                <h4 tabindex="1">This Week <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-chevron-down" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
                   </svg> </h4>
-                <div class="dropdown-content">
+                <div tabindex="1" class="dropdown-content">
                     <li> <a href="">Yesterday</a></li>
                     <li> <a href="">Last Week</a></li>
                     <li> <a href="">Last Month</a></li>
@@ -213,6 +213,9 @@
               
             </div>
         </div>
+        <button class="your-nft-btn">
+            Load More
+        </button>
     </section>
 
     <footer>
@@ -248,6 +251,24 @@
             </div>
             <div class="market-place">
                 <h3>Marketplace</h3>
+
+                <div class="footer-dropdown-container">
+                    <div class="drop-icon-container">
+                    <h4>Marketplace</h4>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </div>
+                    <div class="footer-dropdown-content">
+                        <li>Explore</li>
+                        <li>all NFTs</li>
+                        <li>How it works</li>
+                        <li>Top sellers</li>
+                        <li>Collections</li>
+                    </div>
+                    
+                </div>
+
                 <ul>
                     <li>Explore</li>
                     <li>all NFTs</li>
@@ -259,6 +280,22 @@
 
             <div class="company">
                 <h3>Company</h3>
+               <div class="footer-dropdown-container">
+                <div class="drop-icon-container">
+                    <h4>Company</h4>
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </div>
+                <div class="footer-dropdown-content">
+                    <li>about us</li>
+                    <li>careers</li>
+                    <li>partners</li>
+                    <li>blog</li>
+                    <li>help Center</li>
+                </div>
+
+               </div>
                 <ul>
                     <li>about us</li>
                     <li>careers</li>
@@ -277,10 +314,12 @@
         
 
         <div class="copyright-section">
-            <p class="copyright-p1">Copyright 2022-Hexa. All rights reserved</p>
-            <div>
-                <p>Privacy Policy</p>
-                <p>Terms and Conditions</p>
+            <div class="copyright-section-mobile">
+                <p class="copyright-p1">Copyright 2022-Hexa. All rights reserved</p>
+                <div>
+                    <p>Privacy Policy</p>
+                    <p>Terms and Conditions</p>
+            </div>
             </div>
             
         </div>
