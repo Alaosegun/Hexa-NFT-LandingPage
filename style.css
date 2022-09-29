@@ -168,6 +168,8 @@ nav button{
     font-size: 1.4375rem;
     line-height: 45px;
     margin-top: 1.2rem;
+    margin-right: 2rem;
+    cursor: pointer;
     box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
 }
 .header-text .explore:focus, .header-text .create:focus{
@@ -184,6 +186,7 @@ nav button{
     font-family: 'Sora';
     font-style: normal;
     font-weight: 600;
+    cursor: pointer;
     font-size: 1.4375rem;
     line-height: 45px;
     border: 2px solid black;
@@ -199,15 +202,21 @@ nav button{
     margin-bottom: 0rem;
 }
 div.amount{
-    display: flex;
-    gap: 3rem;
-    width: 36%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 3rem; */
+    width: 30%;
+    margin-right: 10%;
 }
 div.amount h3{
     font-size: 2rem;
 }
+div .amount h4{
+    color: #FF521B;
+    margin-top: 0.3rem;
+}
 .under-head-img-container{
-    width: 32rem;
+    width: 35rem;
     height: fit-content;
     background-color: white;
     border: 4px solid black;
@@ -223,27 +232,25 @@ div.amount h3{
     position: relative;
     bottom: 1rem;
 }
-.bid-time-container{
+ .bid-time-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+} 
+.bid-time-child{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    
+}
+.bid-time-child h4{
+    margin-bottom: 1rem;
 }
 .bid-time-container h3{
     color: #FF521B;
     margin-top: 1rem;
     font-weight: 700;
-}
-.bid-features{
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 0.4rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-.bid-img{
-   position: absolute;
-   top: 39.5rem;
-   left: 56%;
-  
+    font-size: 1rem;
 }
 .top-flex{
     display: flex;
@@ -829,6 +836,8 @@ footer ul{
         line-height: 45px;
         margin-top: 1.2rem;
         margin-bottom: 2rem;
+        margin-right: 1rem;
+        cursor: inherit;
     }
     .header-text .create{
         width: 40%;
@@ -856,9 +865,16 @@ footer ul{
         margin-bottom: 2rem;
     }
     div.amount{
-        display: flex;
-        gap: 3rem;
-        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+        width: 100%;
+        margin-right: 0%;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+       
     }
     div.amount h3{
         font-size: 1.4rem;
@@ -866,6 +882,13 @@ footer ul{
         margin-right: auto;
         display: block;
         margin-top: 1rem;
+    }
+    div .amount h4{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        color: #FF521B;
+        margin-top: 0rem;
     }
     .under-head-img-container{
         width: 95%;
@@ -891,28 +914,46 @@ footer ul{
         margin-right: auto;
         display: block;
     }
-    .bid-time-container{
-        display: flex;
-        justify-content: space-evenly;
-    }
-    .bid-time-container h3{
-        color: #FF521B;
-        margin-top: 1rem;
-        font-weight: 700;
-        font-size: 0.9rem;
-    }
-    .bid-features{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 0.4rem;
-        margin-bottom: 0.6rem;
-        font-weight: 700;
-        font-size: 0.7rem;
-    }
-    .bid-img{
-     display: none;
     
-    }
+
+   
+.under-head-img-container{
+    width:95%;
+    height: fit-content;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 8px;
+  
+}
+.amount-orange-container{
+    display: flex;
+    gap: 3rem;
+    margin-left: 11.5%;
+    color: #FF521B;
+    font-weight: 600;
+    position: relative;
+    bottom: 1rem;
+}
+ .bid-time-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+} 
+.bid-time-child{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    width: 80%;
+    
+}
+.bid-time-child h3{
+    font-size: 0.4rem;
+}
+.bid-time-child h4{
+    margin-bottom: 1rem;
+    font-size: 0.4rem;
+   
+}
     .top-flex{
         display: flex;
         justify-content: space-between;
