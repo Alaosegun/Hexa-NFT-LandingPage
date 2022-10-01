@@ -674,6 +674,27 @@ footer ul{
     display: none;
     
 }
+.email-container{
+    margin-top: 1rem;
+}
+.email-container #footer-email{
+    padding: 10px;
+    width: 60%;
+    border: 3px solid #FF521B;
+    border-radius: 15px;
+    background-color: white;
+    
+}
+.email-container .footer-btn{
+    padding: 10px;
+    width: 30%;
+    background-color: white;
+    color: #FF521B;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 15px;
+    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+}
 @media screen  and (max-width: 600px){
     body{
         overflow-x: hidden;
@@ -1477,6 +1498,32 @@ footer ul{
     }
     .company .footer-dropdown-container{
         margin-bottom: 2rem;
+    }
+    .email-container{
+        margin-top: 1rem;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .email-container #footer-email{
+        padding: 10px;
+        width: 80%;
+        border: 3px solid #FF521B;
+        border-radius: 15px;
+        background-color: white;
+        
+    }
+    .email-container .footer-btn{
+        padding: 10px;
+        width: 50%;
+        background-color: white;
+        color: #FF521B;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 15px;
+        margin-top: 0.6rem;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
     }
 
    
