@@ -29,10 +29,6 @@ html{
     }
 }
 body{
-   
-    background-image: url(Images/3\ lines\ hexa.png);
-    background-repeat: no-repeat;
-    background-position: right  top;
     background-size: 55%;
     font-family: sora;
     
@@ -46,7 +42,7 @@ nav{
     position: fixed;
     width: 100%;
     z-index: 1;
-    background-color: #FEFEF4;
+    /* background-color: #FEFEF4; */
 }
 .mobile-search-btn .bi-search{
     display: none;
@@ -110,17 +106,21 @@ nav button{
     position: absolute;
     z-index: 1;
 }
+
 .hero1-img{
     z-index: 1;
     width: 35rem;
-    margin-top: 9rem;
-    margin-top: 8 rem;
-
+    margin-top: 8rem;
+    background: url(./Images/Group\ 91.png);
 }
 .header-container{
     display: flex;
     justify-content: space-evenly;
     margin-top: 0rem;
+    background-image: url(./Images/deskop-background.png);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position:  right 10px top;
     
 }
 .header-text{
@@ -433,6 +433,11 @@ div .amount h4{
     /* display: grid; */
     grid-template-columns: repeat(3, 1fr);
    text-align: center;
+     background-image: url(./Images/life-background.png); 
+     background-repeat: no-repeat;
+     background-size: 35%;
+     background-position: right;
+   
     
 }
 .life-top-flex{
@@ -518,6 +523,10 @@ div .amount h4{
 } 
 .your-nft{
     margin-top: 8rem;
+    background-image: url(./Images/sell-2\ background.png); 
+    background-repeat: no-repeat;
+    background-size: 14%;
+    background-position:  left top ;
 }
 .your-nft h3{
     margin-bottom: 5rem;
@@ -545,12 +554,15 @@ div .amount h4{
 
 .your-nft h4{
     font-size: 1.15rem;
+   
     
 }
 .own-2 img , .own-3 img, .own-4 img{
     width: 30%;
     position: relative;
     bottom: 3rem;
+   
+    
 }
 .own-1 img{
     width: 30%;
@@ -680,10 +692,20 @@ footer ul{
 .email-container #footer-email{
     padding: 10px;
     width: 60%;
-    border: 3px solid #FF521B;
-    border-radius: 15px;
-    background-color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
     
+}
+.email-container #footer-email::-webkit-input-placeholder{
+    color: rgb(205, 205, 205);
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+    font-family: sora;
+   
 }
 .email-container .footer-btn{
     padding: 10px;
@@ -804,6 +826,9 @@ footer ul{
         flex-direction: column;
         /* align-items: center; */
         margin-top: 0;
+        background-image: url(./Images/mobile-hero-img-background.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
     }
     .header-text{
         margin-top: 5rem;
@@ -833,6 +858,7 @@ footer ul{
         margin-right: auto;
         display: block;
         margin-bottom: 1rem;
+      
     }
     .hero1-img{
         width: 90%;
@@ -841,6 +867,8 @@ footer ul{
         display: block;
         z-index: 1;
         margin-top: 0;
+    
+      
     }
 
     .header-text .explore{
@@ -960,19 +988,26 @@ footer ul{
     justify-content: space-evenly;
     align-items: center;
 } 
+.bid-time-container img{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 120%;
+}
 .bid-time-child{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0.4rem;
-    width: 80%;
+    /* width: 80%; */
+
     
 }
 .bid-time-child h3{
-    font-size: 0.4rem;
+    font-size: 50%;
 }
 .bid-time-child h4{
     margin-bottom: 1rem;
-    font-size: 0.4rem;
+    font-size: 50%;
    
 }
     .top-flex{
@@ -1026,9 +1061,10 @@ footer ul{
         display: block;
     }
     .top-collections{
-        background-image: url(./Images/top-collections3lines.png);
+        background-image: url(./Images/Group\ 92.png);
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 50%;
+        background-position: left  bottom;
         margin-top: 7rem;
         height: fit-content;
         margin-bottom: 3rem;
@@ -1041,7 +1077,7 @@ footer ul{
         gap: 2rem;
         margin-left: 1rem;
         width: 100%;
-        margin-top: 3rem;
+        margin-top: 1rem;
     }
     
     .top-flex h4{
@@ -1167,11 +1203,16 @@ footer ul{
     }
     .life-nft{
         margin-top: 3rem;
+       
     }
     .life-nft-container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
+        background-image: url(./Images/life-background.png); 
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: right;
 
     }
     .life-1, .life-2, .life-3, .life-4, .life-5, .life-6{
@@ -1279,7 +1320,12 @@ footer ul{
         margin-right: auto;
         display: block;
     } 
-    
+    .your-nft{
+        background-image: url(./Images/sell-2\ background.png); 
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position:  left bottom;
+    }
     .your-nft-container{
         display: flex;
         justify-content: center;
@@ -1508,10 +1554,14 @@ footer ul{
     }
     .email-container #footer-email{
         padding: 10px;
-        width: 80%;
-        border: 3px solid #FF521B;
-        border-radius: 15px;
-        background-color: white;
+        width: 95%;
+        border: 3px solid white;
+        border-radius: 10px;
+        background-color: black;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: 500;
+        font-family: sora;
         
     }
     .email-container .footer-btn{
