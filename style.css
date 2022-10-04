@@ -761,7 +761,7 @@ footer ul{
         align-items: center;
         transition: 1.5s ease-in-out;
         /* width: 80px; */
-        margin-right: 1rem;
+        margin-right: 2rem;
         height: 52px;
         z-index: 3;
         }
@@ -843,7 +843,7 @@ footer ul{
     nav ul li a{
         font-size: 1.1rem;
         color: black;
-        font-weight: lighter;
+        font-weight: 500;
     }
     a:hover,a.active{
         background: none;
