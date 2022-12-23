@@ -4,12 +4,36 @@
     box-sizing: border-box;
     outline: 0;
     user-select: none;
+    scroll-behavior: smooth;
 }
 img{
     pointer-events: none;
 }
+#icon{
+    /* width: 30px; */
+    
+}
+:root{
+    --primary-color: white;
+    --secondary-color: black; 
 
-
+    
+}
+.dark-theme{
+    --primary-color: black;
+    --secondary-color: white;
+}
+@keyframes float{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
 @font-face {
     font-family: sora;
     src: url(./Sora/Sora-VariableFont_wght.ttf);
@@ -22,9 +46,12 @@ html{
     overflow-x: hidden;
     width: 100%;
     height: 100%;
-    background-color: #FEFEF4;
 }
-
+.timer-container{
+    white-space: nowrap;
+    color: red;
+    font-size: 35px;
+}
 @keyframes bounce {
     to{
         transform: scale(0.95);
@@ -33,6 +60,7 @@ html{
 body{
     background-size: 55%;
     font-family: sora;
+    background-color: var(--primary-color);
     
 }
 nav{
@@ -58,8 +86,8 @@ nav{
 nav label{
     margin-top: 0rem;
     display: flex;
- position: relative;
- right: 9%;
+    position: relative;
+    right: 9%;
 }
 nav label img{
     width: 70%;
@@ -69,6 +97,8 @@ nav ul{
     margin-top: 0.8rem;
     position: relative;
     right: 6%;
+    /* flex: 1;
+    text-align: right; */
 }
 nav ul li{
     display: inline;
@@ -77,10 +107,13 @@ nav ul li{
 nav ul li a{
     text-decoration: none;
     font-size: 1.1rem;
-    color: black;
+    color:var(--secondary-color);
     font-weight: 600;
     line-height: 45px;
     text-transform: capitalize;
+}
+nav ul li a:hover{
+    color: #FF521B;
 }
 nav button{
     width: 180px;
@@ -95,8 +128,14 @@ nav button{
     line-height: 45px;
     margin-top: 0.8rem;
     margin-left: 1.5rem;
+    cursor: pointer;
     box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
  
+}
+nav button:focus{
+    -webkit-animation: bounce .3s  alternate;
+    -moz-animation: bounce .3s  alternate ;
+    animation: bounce .3s  alternate;
 }
 .bi-search{
     font-size: 2rem;
@@ -116,6 +155,7 @@ nav button{
     z-index: 1;
     width: 35rem;
     margin-top: 8rem;
+    animation: float 3s ease-in-out infinite;
    
 }
 .header-container{
@@ -135,6 +175,7 @@ nav button{
     font-size: 3.5rem;
     line-height: 81px;
     width: 36.75rem;
+    color: var(--secondary-color);
     
 }
 .header-text h1 span{
@@ -150,7 +191,7 @@ nav button{
     font-size: 26px;
     line-height: 42px;
     letter-spacing: -0.01em;
-    color: #000000;
+    color: var(--secondary-color);
     margin-top: 1rem;
 }
 .header-container p a{
@@ -212,6 +253,7 @@ div.amount{
 }
 div.amount h3{
     font-size: 2rem;
+    color: var(--secondary-color);
 }
 div .amount h4{
     color: #FF521B;
@@ -221,7 +263,7 @@ div .amount h4{
     width: 35rem;
     height: fit-content;
     background-color: white;
-    border: 4px solid black;
+    border: 4px solid var(--secondary-color);
     border-radius: 8px;
   
 }
@@ -266,8 +308,9 @@ div .amount h4{
     display: flex;
 }
 .top-flex h3{
-    font-size: 1.64rem;
+    font-size: 1.9rem;
     font-weight: 600;
+    color: var(--secondary-color);
 }
 .top-flex h4{
     color: #FF521B;
@@ -389,24 +432,27 @@ div .amount h4{
 .slider6{
     margin-right: 14rem;
 }
-.avatar{
-   
-}
+
 .avatar-container{
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    /* gap: 7rem; */
+
+  
 }
 .avatar-pic{
-    width: 37%;
-    margin-left: 4rem;
+    width: 75%;
+    margin-left: 0rem;
+
 }
 .avatar-text h3{
     font-weight: 600;
     font-size: 2.5rem;
     line-height: 68px;
     width: 70%;
+    color: var(--secondary-color);
+
 }
 .avatar-text p{
     width: 30rem;
@@ -415,7 +461,8 @@ div .amount h4{
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 3rem;
-    text-align: justify;
+    color: var(--secondary-color);
+    /* text-align: justify; */
 }
 .avatar-text span{
     color: #FF521B;
@@ -430,7 +477,7 @@ div .amount h4{
     font-weight: 600;
     font-size: 0.9rem;
     box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
-}
+} 
 .life-nft{
     margin-top: 8rem;
 }
@@ -454,6 +501,7 @@ div .amount h4{
     font-weight: 600;
     font-size: 2.25rem;
     margin-left: 11%;
+    color: var(--secondary-color);
 }
 .life-top-flex h4{
     font-size: 1.625rem;
@@ -470,7 +518,53 @@ div .amount h4{
     border-radius: 20px;
     width: 25%;
 }
-.life-nft-btn{
+.hidden-nft:nth-child(1n + 4){
+    max-height: 0;
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+.btn-area{
+    display: block;
+    background-color: #171717;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 900;
+    width: 180px;
+    line-height: 50px;
+    margin: 50px auto 0;
+    border-radius: 10px;
+    box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+}
+.hidden-nft{
+    grid-template-columns: repeat(3, 1fr);
+
+}
+.hidden-nft img{
+    width: 25%;
+}
+.btn-area .btn2{
+    display: none;
+}
+.btn-area #btn-Box{
+    display: none;
+}
+#btnBox{
+    display: none;
+}
+#btnBox:checked~.hidden-nft:nth-child(1n + 4){
+    max-height: 1000px;
+    opacity: 1;
+    transition: 0.2s ease-in-out;
+}
+.hide-wrapper #btnBox:checked~.btn2{
+    display: block;
+}
+.hide-wrapper #btnBox:checked~.btn2{
+    display: none;
+}
+
+/* .life-nft-btn{
     width: 13rem;
     height: 4rem;
     background: #171717;
@@ -483,7 +577,7 @@ div .amount h4{
     display: block;
     box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
     margin-bottom: 3rem;
-}
+} */
 .top-sellers-container ol{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -520,6 +614,7 @@ div .amount h4{
     font-weight: 600;
     font-size: 2.25rem;
     margin-left: 11%;
+    color: var(--secondary-color);
 }
 .seller-header h4{
     font-size: 1.625rem;
@@ -537,6 +632,7 @@ div .amount h4{
     margin-bottom: 5rem;
     margin-left: 8%;
     font-size: 1.7rem;
+    color: var(--secondary-color);
 }
 .your-nft-container{
     display: flex;
@@ -566,6 +662,7 @@ div .amount h4{
     width: 30%;
     position: relative;
     bottom: 3rem;
+    animation: float 5s ease-in-out infinite;
    
     
 }
@@ -573,6 +670,7 @@ div .amount h4{
     width: 30%;
     position: relative;
     bottom: 3rem;
+    animation: float 5s ease-in-out infinite;
 }
 .own1-text, .own2-text, .own3-text, .own4-text{
     position: relative;
@@ -656,6 +754,11 @@ footer ul{
     box-shadow: #000 3px 3px 0 0, #fff 3px 3px 0 0.5px;
    
 }
+.label-container svg:focus{
+    -webkit-animation: bounce .3s  alternate;
+    -moz-animation: bounce .3s  alternate ;
+    animation: bounce .3s  alternate;
+}
 .social-icons{
 
 }
@@ -726,7 +829,8 @@ footer ul{
     body{
         overflow-x: hidden;
         background-image: none;
-        background: #FFFEE3;
+        /* background: #FFFEE3; */
+        background: var(--primary-color);
         
     }
     main{
@@ -915,7 +1019,7 @@ footer ul{
         margin-right: auto;
         display: block;
         z-index: 1;
-        margin-top: 0;
+        margin-top: 2rem;
     
       
     }
@@ -1211,6 +1315,7 @@ footer ul{
         margin-left: auto;
         margin-right: auto;
         display: block;
+        animation: float 2s ease-in-out infinite;
     }
     .avatar-text h3{
         font-weight: 600;
@@ -1267,11 +1372,21 @@ footer ul{
         background-position: right;
 
     }
-    .life-1, .life-2, .life-3, .life-4, .life-5, .life-6{
+    .life-1, .life-2, .life-3, .life-4, .life-5, .life-6,  .life-7,  .life-8{
         border: 2px solid black;
         padding: 0.7rem;
         border-radius: 10px;
         width: 95%;
+        
+    }
+    .hidden-nft{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  
+        height: inherit; 
+    }
+    .hidden-nft img{
+        width: 95%;
+        
     }
     .life-top-flex{
         display: flex;
@@ -1302,7 +1417,37 @@ footer ul{
         margin-bottom: 1rem;
         margin-left: 0rem;
     }
-    .life-nft-btn{
+    
+    .hidden-nft:nth-child(1n + 4){
+        max-height: 0;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+    }
+    .btn-area{
+        display: block;
+        background-color: #171717;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        font-weight: 900;
+        width: 180px;
+        line-height: 50px;
+        margin: 50px auto 0;
+        border-radius: 10px;
+        box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
+    }
+    .btn-area .btn2{
+        display: none;
+    }
+    .btn-area #btnBox{
+        display: none;
+    }
+    #btnBox:checked~.hidden-nft:nth-child(1n + 4){
+        max-height: 1000px;
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+    }
+    /* .life-nft-btn{
         width: 70%;
         height: 3.125rem;
         background: #171717;
@@ -1316,7 +1461,7 @@ footer ul{
         box-shadow: #fff 3px 3px 0 0, #000 3px 3px 0 0.5px;
         margin-bottom: 2rem;
        
-    }
+    } */
     .top-sellers{
         margin-top: 5rem;
     }
@@ -1419,7 +1564,7 @@ footer ul{
         bottom: 3rem;
     }
     .own-1 img{
-        width: 36%;
+        width: 30%;
         position: relative;
         bottom: 3rem;
     }

@@ -23,11 +23,15 @@
     <label for="logo" class="nav-logo"><img src="./Images/Logo.svg" alt=""></label>
     <ul>
         
-        <li><a href="">Home</a></li>
+        <li><a href="#">Home</a></li>
         <li><a href="">explore</a></li>
         <li><a href="#marketplace">marketplace</a></li>
         <li><a href="">create</a></li>
+        <li>  <svg xmlns="http://www.w3.org/2000/svg" id="icon" width="30"  fill="red" class="bi bi-chevron-down" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+          </svg></li>
     </ul>
+  
      <div class="nav-button-section">
         <i class="bi bi-search"></i>
         <button>Connect Wallet</button>
@@ -60,11 +64,17 @@
                 <!-- <div><img class="bid-img" src="/Images/bid-img.png" alt=""></div> -->
                 
                 <div class="bid-time-container">
-                    <img class="bid-img" src="/Images/2.png" alt="">
+                    <img class="bid-img" src="https://hexa-nfts.netlify.app/images/blackpic.svg" alt="">
                     <div class="bid-time-child">
                     <h3>HAPE#383</h3>
                     <h3>1.43 ETH</h3>
-                    <h3 id="clockdiv"><span class="days">30d</span> <span class="hours">:10h</span> :<span class="minutes">20m</span><span class="seconds">:40s</span></h3>
+                    
+                        <div class="timer-container">
+                            <div class="timer">
+                                <h2></h2>
+                            </div>
+                        </div>
+                   
                     <h4>HAPE PRIME</h4>
                     <h4>Current Bid</h4>
                     <h4>Remaining Time</h4>
@@ -108,6 +118,8 @@
             <img class="slider6" src="./Images/pic1.svg" alt="">    
         </div>
     </section>
+
+    
     <section class="avatar" id="marketplace">
         <div class="avatar-container">
             <img class="avatar-pic" src="./Images/NFTSavatars_st.svg" alt="">
@@ -134,16 +146,34 @@
             </div>
             
         </div>
+   <div id="wrapper-loadmore-nft">
+
        
         <div class="life-nft-container">
+            <input type="checkbox" id="btnBox">
         <img class="life-1" src="./Images/livenft1.svg" alt="">
         <img class="life-2" src="./Images/livenft2.svg" alt="">
         <img class="life-3" src="./Images/livenft3.svg" alt="">
         <img class="life-4" src="./Images/livenft4.svg" alt="">
         <img class="life-5" src="./Images/livenft5.svg" alt="">
         <img class="life-6" src="./Images/livenft6.svg" alt="">
+        
+     
+        <section class="hidden-nft">
+         <img class="life-6" src="./Images/livenft1.svg" alt="">
+         <img class="life-6" src="./Images/livenft2.svg" alt="">
+         <img class="life-6" src="./Images/livenft3.svg" alt=""> 
+         <img class="life-6" src="./Images/livenft4.svg" alt="">
+         <img class="life-6" src="./Images/livenft5.svg" alt="">
+         <img class="life-6" src="./Images/livenft6.svg" alt=""> 
+        </section>
     </div>
-    <button class="life-nft-btn">Load More</button>
+
+    <label for="btnBox" class="btn-area">
+        <span class="btn1">LOAD MORE</span>
+        <span class="btn2">LOAD LESS</span>
+    </label>
+</div>
     </section>
 
     <section class="top-sellers">
@@ -164,7 +194,7 @@
         <div class="top-sellers-container">
             <ol>
                 <img src="./Images/sell1.svg" alt="">
-                <img src="./Images/sell2.svg" alt="">
+                <img src="./Images/sell2.svg" alt="">   
                 <img src="./Images/sell3.svg" alt="">
                 <img src="./Images/sell4.svg" alt="">
                 <img src="./Images/sell5.svg" alt="">
@@ -330,5 +360,8 @@
     </footer>
 </main>
 <script src="./script.js"></script>
+<script>
+  
+</script>
 </body>
 </html>
